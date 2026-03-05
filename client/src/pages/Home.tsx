@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database } from "lucide-react";
+import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
@@ -104,8 +104,52 @@ export default function Home() {
         Bilateral Trade, Revenue Operations, AI Sales Agents, Sales Workflow Optimisation
       </div>
 
+      {/* Edutainment Hook */}
+      <section className="py-20 bg-card relative z-10 border-y border-white/5" data-testid="section-edutainment">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center space-y-6"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-destructive/30 bg-destructive/10 text-destructive text-sm font-medium">
+              <AlertTriangle className="w-4 h-4" />
+              <span>Industry Reality Check</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight" data-testid="text-edutainment-heading">
+              Why <span className="text-destructive">90%</span> of bizdev agencies fail in their first year?
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto" data-testid="text-edutainment-description">
+              They rely on volume over value. Cold lists, generic outreach, and zero personalisation. The agencies that survive build intelligent systems — ones that blend AI-powered prospecting with genuine human relationships.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6 pt-8">
+              {[
+                { stat: "90%", label: "Fail within 12 months" },
+                { stat: "3\u00d7", label: "Higher close rate with HITL" },
+                { stat: "< 2 min", label: "Average lead response needed" },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * i }}
+                  className="text-center"
+                  data-testid={`text-stat-${i}`}
+                >
+                  <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-1">{item.stat}</div>
+                  <div className="text-sm text-muted-foreground">{item.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Expertise Section */}
-      <section className="py-24 bg-card relative z-10 border-y border-white/5">
+      <section className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
@@ -123,7 +167,7 @@ export default function Home() {
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8"
           >
             {[
               {
@@ -140,12 +184,18 @@ export default function Home() {
                 icon: <ShieldCheck className="w-8 h-8 text-primary" />,
                 title: "CRM Integration",
                 desc: "Flawless bidirectional syncing ensuring single-source-of-truth reliability."
+              },
+              {
+                icon: <Users className="w-8 h-8 text-accent" />,
+                title: "Human-in-the-Loop (HITL)",
+                desc: "Our human-in-the-loop engine fuses AI intent signals with the personal touch required to close deals. Automating prospecting so your team can focus on building high-value relationships."
               }
             ].map((feature, i) => (
               <motion.div 
                 key={i}
                 variants={fadeInUp}
-                className="bg-background border border-white/5 p-8 rounded-md"
+                className="bg-card border border-white/5 p-8 rounded-md"
+                data-testid={`card-expertise-${i}`}
               >
                 <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center mb-6">
                   {feature.icon}
