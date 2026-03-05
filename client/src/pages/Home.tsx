@@ -73,7 +73,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="font-semibold group"
+                className="font-semibold group cta-glow"
                 data-testid="button-cta-hero"
               >
                 Book Your Revenue Audit
@@ -388,7 +388,7 @@ export default function Home() {
             <Button 
               variant="secondary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-bold text-lg group"
+              className="font-bold text-lg group cta-glow"
               data-testid="button-cta-footer"
             >
               Book Your Revenue Audit

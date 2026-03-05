@@ -69,3 +69,16 @@
 .glass-panel {
   @apply bg-background/60 backdrop-blur-xl border border-white/10 shadow-2xl;
 }
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px hsl(217 91% 60% / 0.4), 0 0 20px 4px hsl(217 91% 60% / 0.15);
+  }
+  50% {
+    box-shadow: 0 0 14px 4px hsl(217 91% 60% / 0.55), 0 0 32px 8px hsl(217 91% 60% / 0.25);
+  }
+}
+
+.cta-glow {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
