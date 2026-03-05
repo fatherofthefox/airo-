@@ -181,7 +181,7 @@ export function LeadForm() {
 
           <Button
             type="submit"
-            className="w-full text-base font-semibold group"
+            className="w-full text-base font-semibold group cta-glow"
             disabled={isPending}
             data-testid="button-submit"
           >

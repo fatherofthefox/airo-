@@ -388,7 +388,7 @@ export default function Home() {
             <Button 
               variant="secondary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-bold text-lg group cta-glow"
+              className="font-bold text-lg group cta-glow-light"
               data-testid="button-cta-footer"
             >
               Book Your Revenue Audit
