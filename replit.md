@@ -42,6 +42,7 @@ Preferred communication style: Simple, everyday language.
 | `client/src/components/LeadForm.tsx` | Strategy Session form with GDPR consent, honeypot (`website_url`), and timestamp bot check |
 | `client/src/components/Seo.tsx` | Dynamic meta tag management (OG, Twitter, description) |
 | `client/src/hooks/use-contact.ts` | TanStack mutation that posts to Formspree; client-side bot detection |
+| `client/src/components/LeadCarousel.tsx` | 5-slide interactive carousel: "The Lead Conversion Engine" with JSON-LD HowTo schema |
 
 ### Backend Architecture
 

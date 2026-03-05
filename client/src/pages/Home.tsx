@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
+import { LeadCarousel } from "@/components/LeadCarousel";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -223,8 +224,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Lead Conversion Engine — Interactive Blueprint */}
+      <section id="lead-engine" className="py-24 bg-card relative z-10 border-y border-white/5" aria-label="Improving Lead Generation in 2026" data-testid="section-lead-engine">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6 lg:sticky lg:top-28"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 text-accent text-sm font-medium">
+                <BarChart3 className="w-4 h-4" />
+                <span>Interactive Blueprint</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold" data-testid="text-carousel-heading">
+                The Lead Conversion Engine
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                A 5-step framework for improving lead generation in 2026. Each step builds on the last, creating a self-optimising revenue loop powered by AI sales agents and Revenue Operations best practices.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Navigate the slides to explore each stage of the blueprint — from smart lead magnets through to AI-driven feedback loops for bilateral trade and UK market growth.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <LeadCarousel />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Form / Lead Section */}
-      <section id="contact" className="py-24 bg-card relative z-10">
+      <section id="contact" className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div 
