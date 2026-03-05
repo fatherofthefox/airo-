@@ -1,0 +1,24 @@
+Project Specification: A.I.R.O – Intelligent Revenue Operations
+Role: Senior Frontend Developer, CRO Specialist, and Data Privacy Consultant
+Tech Stack: React, Tailwind CSS, Lucide-React
+Locale: UK English (Strict adherence to British spelling)
+1. Brand Identity & USP
+Name: A.I.R.O – Intelligent Revenue Operations.
+Core Value: Creating seamless revenue engines that capitalise on UK market share and bilateral global trade frameworks.
+2. Content & Copy (from Attachment)
+Hero: "Seamless Revenue Engines: Integrating AI-Driven Demand Gen with High-Touch Human Strategy."
+The Expertise: Highlight 25+ years of B2B experience and the "Gold Standard" tech stack (Apollo, Reply.io, CRM).
+Frameworks: Explicitly mention BANT and FAINT qualification frameworks in the Sales Workflow section.
+3. Lead Form & UK GDPR Guardrails
+The Form: Create a "Strategy Session" lead capture form.
+Privacy Consent: Include a mandatory (non-pre-ticked) checkbox: "I consent to A.I.R.O processing my data in accordance with the UK GDPR to provide revenue operations consultancy."
+Data Minimisation: Only collect essential fields (Name, Business Email, Company Name).
+Privacy Footer: Add a "Privacy & Data Protection" link that opens a modal with this placeholder text:
+Privacy Notice: A.I.R.O (Intelligent Revenue Operations) is committed to protecting your personal data in accordance with the Data Protection Act 2018 and UK GDPR. We process your information solely to respond to your inquiry and provide our services. Your data is stored securely within the UK/EEA and is never sold to third parties. You have the right to access, rectify, or request erasure of your data at any time by contacting us.
+4. AI Search & Security Optimisation
+Schema.org: Generate a JSON-LD script for a "ProfessionalService" entity.
+Bot Prevention: Implement a honeypot field and a "hidden" timestamp check to block automated form submissions.
+Semantic SEO: Use the keywords "Revenue Operations," "Bilateral Trade," and "AI Sales Agents" within <section> tags.
+5. Final Power CTA
+Visual: A full-width, high-contrast section at the bottom.
+Copy: "Ready to scale your UK market share? Leverage Intelligent Revenue Operations today. [Book Your Revenue Audit]"
