@@ -8,15 +8,14 @@ interface SeoProps {
   ogType?: string;
 }
 
-function setMetaTag(property: string, content: string, isOg = false) {
-  const attr = isOg ? "property" : "name";
-  const selector = `meta[${attr}="${property}"]`;
+function setMetaTag(attribute: string, key: string, content: string) {
+  const selector = `meta[${attribute}="${key}"]`;
   let el = document.querySelector(selector);
   if (el) {
     el.setAttribute("content", content);
   } else {
     el = document.createElement("meta");
-    el.setAttribute(attr, property);
+    el.setAttribute(attribute, key);
     el.setAttribute("content", content);
     document.head.appendChild(el);
   }
@@ -32,24 +31,29 @@ export function Seo({
   useEffect(() => {
     document.title = title;
 
-    setMetaTag("description", description);
+    setMetaTag("name", "description", description);
 
-    setMetaTag("og:title", title, true);
-    setMetaTag("og:description", description, true);
-    setMetaTag("og:type", ogType, true);
+    setMetaTag("property", "og:title", title);
+    setMetaTag("property", "og:description", description);
+    setMetaTag("property", "og:type", ogType);
+    setMetaTag("property", "og:locale", "en_GB");
+    setMetaTag("property", "og:site_name", "A.I.R.O - Intelligent Revenue Operations");
 
-    if (ogUrl) {
-      setMetaTag("og:url", ogUrl, true);
-    } else if (typeof window !== "undefined") {
-      setMetaTag("og:url", window.location.href, true);
+    const resolvedUrl = ogUrl || (typeof window !== "undefined" ? window.location.href : "");
+    if (resolvedUrl) {
+      setMetaTag("property", "og:url", resolvedUrl);
     }
 
     if (ogImage) {
-      setMetaTag("og:image", ogImage, true);
+      setMetaTag("property", "og:image", ogImage);
     }
 
-    setMetaTag("og:locale", "en_GB", true);
-    setMetaTag("og:site_name", "A.I.R.O - Intelligent Revenue Operations", true);
+    setMetaTag("name", "twitter:card", "summary_large_image");
+    setMetaTag("name", "twitter:title", title);
+    setMetaTag("name", "twitter:description", description);
+    if (ogImage) {
+      setMetaTag("name", "twitter:image", ogImage);
+    }
   }, [title, description, ogImage, ogUrl, ogType]);
 
   const jsonLd = {
@@ -57,14 +61,48 @@ export function Seo({
     "@type": "ProfessionalService",
     name: "A.I.R.O - Intelligent Revenue Operations",
     description:
-      "Integrating AI-Driven Demand Gen with High-Touch Human Strategy.",
-    areaServed: "United Kingdom",
+      "Seamless Revenue Engines: Capitalise on UK market share and bilateral global trade frameworks with AI-driven demand generation and high-touch human strategy.",
+    url: typeof window !== "undefined" ? window.location.origin : "",
+    areaServed: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+    serviceType: "Revenue Operations Consultancy",
     knowsAbout: [
       "Revenue Operations",
       "Bilateral Trade",
       "AI Sales Agents",
       "B2B Sales",
+      "Demand Generation",
+      "UK Market Share Growth",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Revenue Operations Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI-Driven Demand Generation",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Revenue Audit & Strategy Session",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Sales Workflow Optimisation",
+          },
+        },
+      ],
+    },
   };
 
   return (

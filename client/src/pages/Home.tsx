@@ -23,7 +23,8 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       <Seo 
         title="A.I.R.O | Intelligent Revenue Operations" 
-        description="Seamless Revenue Engines: Integrating AI-Driven Demand Gen with High-Touch Human Strategy." 
+        description="Capitalise on UK market share and bilateral global trade frameworks. 25+ years of B2B expertise powering AI-driven demand generation with high-touch human strategy."
+        ogImage="/favicon.png"
       />
 
       {/* Navigation */}
