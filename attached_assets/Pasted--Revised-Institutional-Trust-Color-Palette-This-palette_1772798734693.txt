@@ -1,0 +1,30 @@
+ Revised "Institutional Trust" Color Palette
+This palette moves away from "Cyberpunk Blue" toward "Establishment Blue" and "Heritage Accents" to signal longevity and compliance.
+Role	Color	Hex Code	Purpose
+Primary (60%)	Deep Navy	#001F3F	The foundation of trust and authority.
+Secondary (30%)	Ivory / Off-White	#F8F9FA	For a clean, high-contrast background that is easy on the eyes.
+Accent (10%)	British Racing Green	#004225	Subtly signals "UK Market" and financial growth.
+Call to Action	Muted Gold	#C5A059	High-contrast button color that feels premium, not "salesy".
+2. The "Z-Pattern" Wireframe Layout
+This layout follows the natural scanning path of a busy executive, moving from high-level value to hard proof.
+Header:
+Left: Professional Logo (Clean, Serif or Minimalist Sans-Serif).
+Right: Simple Navigation: Solutions | Case Studies | UK Compliance | [CTA: Book Audit].
+Hero Section (Top 50% of screen):
+Left Column (Text):
+Headline: "UK Sovereign Growth Partner." (Bold, High-Contrast).
+Sub-headline: "Architecting £1M+ UK revenue pipelines for offshore engineering firms through bilateral expertise."
+Primary CTA: [Secure Your UK Market Audit →] (Muted Gold Button).
+Right Column (Visual):
+The "Proof" Graphic: Replace the bar chart icon with a High-Fidelity Dashboard Mockup. Show a map of the UK with growth "hotspots" or a chart showing "Time to UK Compliance" dropping from 12 months to 3.
+Trust Bar (Below Hero):
+A "Greyscale" carousel of logos representing current partners or the sectors you specialize in (e.g., Aerospace, AI, Fintech).
+The "Capabilities" Grid (Middle Section):
+Instead of a list, use 3-Column Feature Cards:
+Market Entry: Fractional COO/CRO services for B2B tech.
+Compliance & Risk: Navigating UK Legal, Insurance, and Tax.
+Revenue Engines: AI Sales Agents + HITL Growth Systems.
+3. Immediate Technical "Fixes"
+Typography: Switch to a professional pairing like Playfair Display (Headings) and Inter (Body). This signals a mix of "Established Authority" and "Modern Tech."
+Button Treatment: Give your button a slight shadow or border-radius (4px) to make it feel like a "physical" high-quality tool rather than just text on a screen.
+Copy Density: Move your long text list ("Strategic Fractional COO/CRO | Scaling B2B Tech...") into the Footer or as a separate "About the Methodology" section.

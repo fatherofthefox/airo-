@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,39 +6,39 @@
 
 @layer base {
   :root {
-    --font-sans: 'DM Sans', sans-serif;
-    --font-display: 'Sora', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-display: 'Playfair Display', serif;
 
-    /* A.I.R.O Premium Dark Theme */
-    --background: 222 47% 7%;
-    --foreground: 210 40% 98%;
+    /* Institutional Trust Palette */
+    --background: 210 100% 12%;
+    --foreground: 210 17% 98%;
 
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 80% 10%;
+    --card-foreground: 210 17% 98%;
 
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 80% 10%;
+    --popover-foreground: 210 17% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 39 47% 56%;
+    --primary-foreground: 210 100% 6%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 18%;
+    --secondary-foreground: 210 17% 98%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 18%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 189 94% 43%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 154 100% 13%;
+    --accent-foreground: 210 17% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 17% 98%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 217 91% 60%;
+    --border: 210 40% 18%;
+    --input: 210 40% 18%;
+    --ring: 39 47% 56%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
   }
 }
 
@@ -58,12 +58,12 @@
 /* Custom Gradients & Effects */
 .bg-grid-white {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[hsl(39,60%,70%)] to-primary;
 }
 
 .glass-panel {
@@ -72,10 +72,10 @@
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 8px 2px hsl(217 91% 60% / 0.4), 0 0 20px 4px hsl(217 91% 60% / 0.15);
+    box-shadow: 0 0 8px 2px hsl(39 47% 56% / 0.4), 0 0 20px 4px hsl(39 47% 56% / 0.15);
   }
   50% {
-    box-shadow: 0 0 14px 4px hsl(217 91% 60% / 0.55), 0 0 32px 8px hsl(217 91% 60% / 0.25);
+    box-shadow: 0 0 14px 4px hsl(39 47% 56% / 0.55), 0 0 32px 8px hsl(39 47% 56% / 0.25);
   }
 }
 

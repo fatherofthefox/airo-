@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle } from "lucide-react";
+import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
@@ -37,13 +37,35 @@ export default function Home() {
             </div>
             <span className="font-display font-bold text-xl tracking-tight">A.I.R.O</span>
           </div>
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#capabilities"
+              className="text-sm text-muted-foreground transition-colors"
+              data-testid="link-solutions"
+            >
+              Solutions
+            </a>
+            <a
+              href="#lead-engine"
+              className="text-sm text-muted-foreground transition-colors"
+              data-testid="link-case-studies"
+            >
+              Case Studies
+            </a>
+            <a
+              href="#frameworks"
+              className="text-sm text-muted-foreground transition-colors"
+              data-testid="link-compliance"
+            >
+              UK Compliance
+            </a>
+          </div>
           <Button 
-            variant="ghost"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold shadow-md"
             data-testid="button-cta-nav"
           >
-            Strategy Session
+            Secure Your UK Market Audit
           </Button>
         </div>
       </nav>
@@ -51,7 +73,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 bg-grid-white">
         <div className="absolute inset-0 bg-background/90" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div 
@@ -68,12 +90,12 @@ export default function Home() {
               UK Sovereign <span className="text-gradient">Growth</span> Partner.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl" data-testid="text-hero-description">
-              Providing strategic local presence, with "Human-in-the-Loop" intelligence, and AI-driven demand engines required to convert your technical excellence into UK B2B contracts. Architecting predictable £1M+ pipelines through Bilateral Trade expertise.
+              Architecting £1M+ UK revenue pipelines for offshore engineering firms through bilateral expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="font-semibold group cta-glow"
+                className="font-semibold group cta-glow shadow-lg"
                 data-testid="button-cta-hero"
               >
                 Secure Your UK Market Audit
@@ -95,14 +117,6 @@ export default function Home() {
               <BarChart3 className="w-20 h-20 text-primary relative z-10" />
             </div>
           </motion.div>
-        </div>
-        <div className="relative z-10 mt-12 max-w-7xl mx-auto w-full">
-          <p className="text-base md:text-xl lg:text-2xl text-muted-foreground font-semibold tracking-wide text-center leading-relaxed max-w-6xl mx-auto px-4">
-            Strategic Fractional COO/CRO | Scaling B2B Tech into UK Markets | Expert in Cross-Border Compliance, Legal, Tax &amp; Revenue Operations | AI-Driven Sales &amp; HITL Growth Systems
-          </p>
-          <p className="text-base md:text-xl lg:text-2xl text-primary font-bold tracking-wide text-center mt-8">
-            Transforming your Offshore Operation into UK-Compliant Revenue Engine
-          </p>
         </div>
       </section>
 
@@ -155,8 +169,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section className="py-24 bg-background relative z-10">
+      {/* Capabilities Section — 3-Column Grid */}
+      <section id="capabilities" className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
@@ -164,7 +178,62 @@ export default function Home() {
             whileInView="whileInView"
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6" data-testid="text-expertise-heading">25+ Years of B2B Expertise</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6" data-testid="text-expertise-heading">Our Capabilities</h2>
+            <p className="text-lg text-muted-foreground">
+              Three pillars of UK market success — from entry strategy through to AI-powered revenue generation.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                icon: <Globe className="w-8 h-8 text-primary" />,
+                title: "Market Entry",
+                desc: "Fractional COO/CRO services for B2B tech companies entering the UK. Strategic local presence with bilateral trade expertise."
+              },
+              {
+                icon: <Scale className="w-8 h-8 text-accent" />,
+                title: "Compliance & Risk",
+                desc: "Navigating UK legal, insurance, and tax infrastructure. Cross-border compliance that protects your operation and accelerates growth."
+              },
+              {
+                icon: <Zap className="w-8 h-8 text-primary" />,
+                title: "Revenue Engines",
+                desc: "AI Sales Agents combined with Human-in-the-Loop growth systems. Automating prospecting so your team focuses on high-value relationships."
+              }
+            ].map((feature, i) => (
+              <motion.div 
+                key={i}
+                variants={fadeInUp}
+                className="bg-card border border-white/5 p-8 rounded shadow-md"
+                data-testid={`card-expertise-${i}`}
+              >
+                <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-display font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Expertise — Detailed 2×2 Grid */}
+      <section className="py-24 bg-card relative z-10 border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            variants={fadeInUp}
+            initial="initial"
+            whileInView="whileInView"
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">25+ Years of B2B Expertise</h2>
             <p className="text-lg text-muted-foreground">
               We leverage a "Gold Standard" tech stack, including Apollo, Reply.io, and leading CRM systems to optimise every phase of the customer journey.
             </p>
@@ -201,13 +270,13 @@ export default function Home() {
               <motion.div 
                 key={i}
                 variants={fadeInUp}
-                className="bg-card border border-white/5 p-8 rounded-md"
-                data-testid={`card-expertise-${i}`}
+                className="bg-background border border-white/5 p-8 rounded shadow-md"
+                data-testid={`card-detail-${i}`}
               >
                 <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-display font-bold mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
@@ -216,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* Frameworks Section */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section id="frameworks" className="py-24 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div 
@@ -257,7 +326,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="aspect-video bg-card rounded-md border border-white/10 p-8 flex flex-col justify-center relative overflow-hidden">
+              <div className="aspect-video bg-card rounded shadow-md border border-white/10 p-8 flex flex-col justify-center relative overflow-hidden">
                 <div className="absolute -right-20 -top-20 w-64 h-64 bg-accent/20 blur-[100px] rounded-full" />
                 <div className="space-y-6 relative z-10">
                   <div className="h-2 w-1/3 bg-primary/20 rounded-full overflow-hidden">
@@ -364,7 +433,6 @@ export default function Home() {
 
       {/* Power CTA */}
       <section className="py-24 bg-primary relative overflow-hidden">
-        {/* Background texture */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjE1KSIvPjwvc3ZnPg==')] opacity-50" />
         
         <div className="relative max-w-4xl mx-auto px-4 text-center z-10">
@@ -395,13 +463,25 @@ export default function Home() {
             <Button 
               variant="secondary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-bold text-lg group cta-glow-light"
+              className="font-bold text-lg group cta-glow-light shadow-lg"
               data-testid="button-cta-footer"
             >
               Secure Your UK Market Audit
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      {/* About the Methodology */}
+      <section className="py-16 bg-background border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed">
+            Strategic Fractional COO/CRO | Scaling B2B Tech into UK Markets | Expert in Cross-Border Compliance, Legal, Tax &amp; Revenue Operations | AI-Driven Sales &amp; HITL Growth Systems
+          </p>
+          <p className="text-base md:text-lg text-primary font-bold mt-4">
+            Transforming your Offshore Operation into UK-Compliant Revenue Engine
+          </p>
         </div>
       </section>
 

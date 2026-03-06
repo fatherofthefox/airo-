@@ -28,11 +28,11 @@ Preferred communication style: Simple, everyday language.
 
 - **Framework**: React 18 with TypeScript, bundled by Vite
 - **Routing**: Wouter (lightweight client-side router) with two routes: `/` (Home) and a 404 fallback
-- **Styling**: Tailwind CSS with a custom dark theme (deep navy background, blue primary accent, cyan accent). CSS variables drive all colours via HSL values
+- **Styling**: Tailwind CSS with "Institutional Trust" dark palette (Deep Navy #001F3F background, Muted Gold #C5A059 primary/CTA, British Racing Green #004225 accent). CSS variables drive all colours via HSL values
 - **Component Library**: shadcn/ui (New York style) built on Radix UI primitives — full suite of accessible components in `client/src/components/ui/`
 - **Animations**: Framer Motion for scroll-triggered fade/slide-up effects on landing page sections
 - **State & Data Fetching**: TanStack React Query for server state; react-hook-form + Zod for form validation
-- **Fonts**: DM Sans (body, `--font-sans`) and Sora (display headings, `--font-display`), loaded from Google Fonts
+- **Fonts**: Inter (body, `--font-sans`) and Playfair Display (serif display headings, `--font-display`), loaded from Google Fonts
 
 ### Key Frontend Components
 
@@ -102,7 +102,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Google Fonts
 
-- DM Sans and Sora loaded via `<link>` in `client/index.html` and `client/src/index.css`
+- Playfair Display and Inter loaded via `<link>` in `client/index.html` and `client/src/index.css`
 - No API key required; loaded from `fonts.googleapis.com`
 
 ### Key npm Packages
