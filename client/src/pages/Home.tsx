@@ -189,7 +189,7 @@ export default function Home() {
               </h2>
               <div className="max-w-3xl mx-auto space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-edutainment-description">
-                  Most expansions stall due to semantic misalignments — missing the subtle professional nuances and unwritten etiquette required to close deals. AIRO provides the commercial knowledge, semantically precise, and perfectly aligned with UK-specific business logic, to secure high-stakes UK contracts.
+                  Most expansions stall due to semantic misalignments. AIRO provides the commercial knowledge, semantically precise, and perfectly aligned with UK-specific business logic, to secure high-stakes UK contracts &amp; partnerships.
                 </p>
                 <p className="text-lg text-foreground font-medium leading-relaxed">
                   We don't just "prospect"; we architect <span className="text-primary">Intelligent Growth Systems</span> that bridge the gap between AI scale and human-level nuance — leveraging frameworks like the <span className="text-primary">UK-India Enhanced Trade Partnership (ETP)</span> and navigating cross-border data flows under the <span className="text-primary">Data Use and Access Act (DUAA) 2025</span>.
