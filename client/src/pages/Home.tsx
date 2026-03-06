@@ -59,6 +59,13 @@ export default function Home() {
             >
               UK Compliance
             </a>
+            <a
+              href="#ai-agents"
+              className="text-sm text-muted-foreground transition-colors"
+              data-testid="link-ai-agents"
+            >
+              Market Intelligence Agents
+            </a>
           </div>
         </div>
       </nav>
@@ -205,7 +212,7 @@ export default function Home() {
       </section>
 
       {/* AI Market Intelligence Agents */}
-      <section className="py-24 bg-background relative z-10" data-testid="section-ai-agents">
+      <section id="ai-agents" className="py-24 bg-background relative z-10" data-testid="section-ai-agents">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
