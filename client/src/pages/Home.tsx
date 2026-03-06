@@ -117,7 +117,7 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground uppercase tracking-widest">Performance Dashboard</p>
                   <h3 className="text-lg font-display font-bold mt-1">Time to UK Compliance</h3>
                 </div>
-                <div className="flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded text-xs font-semibold">
+                <div className="flex items-center gap-2 bg-emerald-500/15 text-emerald-400 px-3 py-1 rounded text-xs font-semibold">
                   <TrendingUp className="w-3 h-3" />
                   75% faster
                 </div>
