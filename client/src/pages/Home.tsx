@@ -385,7 +385,7 @@ export default function Home() {
               },
               {
                 icon: <ShieldCheck className="w-8 h-8 text-primary" />,
-                title: "CRM &amp; Compliance Bridge",
+                title: "CRM & Compliance Bridge",
                 desc: "AIRO acts as the essential bridge between your offshore operations and UK regulatory reality. Flawless bidirectional CRM syncing with built-in compliance guardrails — single-source-of-truth reliability, locally verified."
               },
               {
