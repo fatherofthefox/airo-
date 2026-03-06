@@ -175,7 +175,7 @@ export default function Home() {
 
       {/* Semantic SEO Keywords via section tags and hidden structured text */}
       <div className="sr-only">
-        Bilateral Trade, Revenue Operations, AI Sales Agents, Sales Workflow Optimisation
+        Bilateral Trade, Revenue Operations, AI Market Intelligence Agents, Strategic Partnership Architecture
       </div>
 
       {/* The 2026 Market Reality — Dark-Mode Insight Panel */}
@@ -310,7 +310,7 @@ export default function Home() {
               {
                 stat: "92%",
                 label: "Market Rejection Rate",
-                desc: "For generic, non-compliant automated outreach in 2026."
+                desc: "For generic, non-compliant automated engagement in 2026."
               },
               {
                 stat: "4.2\u00d7",
@@ -376,7 +376,7 @@ export default function Home() {
               {
                 icon: <Zap className="w-8 h-8 text-primary" />,
                 title: "Revenue Engines",
-                desc: "AI Sales Agents combined with Human-in-the-Loop growth systems. Automating prospecting so your team focuses on high-value relationships."
+                desc: "AI Market Intelligence Agents combined with Human-in-the-Loop growth systems. Automating prospecting so your team focuses on high-value relationships."
               }
             ].map((feature, i) => (
               <motion.div 
@@ -424,12 +424,12 @@ export default function Home() {
               {
                 icon: <Database className="w-8 h-8 text-primary" />,
                 title: "Data Architecture",
-                desc: "AIRO eliminates semantic misalignments at the data layer. We deploy Apollo-driven intent signals and demographic enrichment calibrated for UK buyer personas — so your outreach resonates locally, not generically."
+                desc: "AIRO eliminates semantic misalignments at the data layer. We deploy Apollo-driven intent signals and demographic enrichment calibrated for UK buyer personas — so your engagement resonates locally, not generically."
               },
               {
                 icon: <Zap className="w-8 h-8 text-emerald-400" />,
-                title: "AI Sales Agents",
-                desc: "Our AI agents don't just automate — they localise. Hyper-personalised outreach sequences via Reply.io, engineered to navigate UK-specific trade frictions and professional etiquette that generic platforms miss."
+                title: "AI Market Intelligence Agents",
+                desc: "Our AI agents don't just automate — they localise. Hyper-personalised engagement sequences via Reply.io, engineered to navigate UK-specific trade frictions and professional etiquette that generic platforms miss."
               },
               {
                 icon: <ShieldCheck className="w-8 h-8 text-primary" />,
@@ -598,7 +598,7 @@ export default function Home() {
                 The Lead Conversion Engine
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A 5-step framework for improving lead generation in 2026. Each step builds on the last, creating a self-optimising revenue loop powered by AI sales agents and Revenue Operations best practices.
+                A 5-step framework for improving lead generation in 2026. Each step builds on the last, creating a self-optimising revenue loop powered by AI Market Intelligence Agents and Account-Based Growth best practices.
               </p>
               <p className="text-sm text-muted-foreground">
                 Navigate the slides to explore each stage of the blueprint — from smart lead magnets through to AI-driven feedback loops for bilateral trade and UK market growth.

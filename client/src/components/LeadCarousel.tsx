@@ -126,7 +126,7 @@ export function LeadCarousel() {
     })),
     about: [
       { "@type": "Thing", name: "Lead Generation" },
-      { "@type": "Thing", name: "AI Sales Agents" },
+      { "@type": "Thing", name: "AI Market Intelligence Agents" },
       { "@type": "Thing", name: "Revenue Operations" },
       { "@type": "Thing", name: "B2B Marketing" },
       { "@type": "Thing", name: "Demand Generation" },

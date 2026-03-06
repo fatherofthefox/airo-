@@ -71,7 +71,7 @@ export function Seo({
     knowsAbout: [
       "Revenue Operations",
       "Bilateral Trade",
-      "AI Sales Agents",
+      "AI Market Intelligence Agents",
       "B2B Sales",
       "Demand Generation",
       "UK Market Share Growth",
@@ -98,7 +98,7 @@ export function Seo({
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Sales Workflow Optimisation",
+            name: "Strategic Partnership Architecture",
           },
         },
       ],
