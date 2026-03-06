@@ -4,6 +4,7 @@ import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
 import { MarketCalculator } from "@/components/MarketCalculator";
+import { MarketScorecard } from "@/components/MarketScorecard";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -603,6 +604,16 @@ export default function Home() {
               <p className="text-sm text-muted-foreground">
                 Navigate the slides to explore each stage of the blueprint — from smart lead magnets through to AI-driven feedback loops for bilateral trade and UK market growth.
               </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-2"
+            >
+              <MarketScorecard />
             </motion.div>
 
             <motion.div
