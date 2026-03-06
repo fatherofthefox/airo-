@@ -412,6 +412,7 @@ export default function Home() {
       </section>
 
       {/* Frameworks Section */}
+      {/* Precision Qualification */}
       <section id="frameworks" className="py-24 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -421,26 +422,33 @@ export default function Home() {
               whileInView="whileInView"
               className="space-y-6"
             >
-              <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-display font-bold" data-testid="text-frameworks-heading">
-                Advanced Qualification Frameworks
+              <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-display font-bold leading-tight" data-testid="text-frameworks-heading">
+                Precision Qualification: Protecting Your UK GTM Velocity
               </motion.h2>
-              <motion.p variants={fadeInUp} className="text-lg text-muted-foreground">
-                Our sales workflow integrates robust methodologies to ensure your pipeline is populated with high-intent, highly qualified opportunities.
+              <motion.p variants={fadeInUp} className="text-lg text-muted-foreground leading-relaxed">
+                We don't just fill pipelines; we protect your time and effort with HITL consultation and qualification frameworks, ensuring your resources are only deployed against high-intent, UK-validated opportunities.
               </motion.p>
               
-              <motion.div variants={fadeInUp} className="space-y-4 pt-6">
+              <motion.div variants={fadeInUp} className="space-y-4 pt-4">
                 <div className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-lg mb-1">BANT Methodology</h4>
-                    <p className="text-muted-foreground">Budget, Authority, Need, Timeline assessment embedded into the discovery phase.</p>
+                    <h4 className="font-bold text-lg mb-1">Equal Business Stature</h4>
+                    <p className="text-muted-foreground">Discovery meetings that establish "Equal Business Stature." Move your technical teams from "vendor" to "strategic partner" in the eyes of UK decision-makers.</p>
                   </div>
                 </div>
                 <div className="flex gap-4 pt-4">
-                  <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-bold text-lg mb-1">FAINT Methodology</h4>
-                    <p className="text-muted-foreground">Funds, Authority, Interest, Need, Timing. Proactively creating demand before the budget is formally allocated.</p>
+                    <h4 className="font-bold text-lg mb-1">BANT & FAINT Frameworks</h4>
+                    <p className="text-muted-foreground">Budget, Authority, Need, Timeline — combined with Funds, Authority, Interest, Need, Timing. Proactively creating demand before budget is formally allocated.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 pt-4">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-lg mb-1">Sandler Methodology</h4>
+                    <p className="text-muted-foreground">Pain-based qualification that uncovers genuine commercial urgency — filtering out "tyre-kickers" before they consume your team's bandwidth.</p>
                   </div>
                 </div>
               </motion.div>
@@ -453,23 +461,69 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="aspect-video bg-card rounded shadow-md border border-white/10 p-8 flex flex-col justify-center relative overflow-hidden">
-                <div className="absolute -right-20 -top-20 w-64 h-64 bg-accent/20 blur-[100px] rounded-full" />
-                <div className="space-y-6 relative z-10">
-                  <div className="h-2 w-1/3 bg-primary/20 rounded-full overflow-hidden">
-                    <div className="h-full bg-primary w-full" />
+              <div className="bg-card rounded shadow-md border border-white/10 p-8 relative overflow-hidden">
+                <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full" />
+                <div className="relative z-10 space-y-2">
+                  <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] mb-6">Funnel Efficiency</p>
+
+                  {[
+                    {
+                      phase: "Phase 1",
+                      label: "Semantic Discovery",
+                      sub: "Identify intent vs. noise",
+                      width: "w-full",
+                      opacity: "text-white/60",
+                      barColor: "bg-primary/40",
+                      barFill: "w-full"
+                    },
+                    {
+                      phase: "Phase 2",
+                      label: "Commercial Qualification",
+                      sub: "Hard-filtering via Sandler / BANT / FAINT",
+                      width: "w-[75%]",
+                      opacity: "text-white/80",
+                      barColor: "bg-primary/60",
+                      barFill: "w-[75%]"
+                    },
+                    {
+                      phase: "Phase 3",
+                      label: "High-Trust Conversion",
+                      sub: 'Closing the "Nuance Gap"',
+                      width: "w-[45%]",
+                      opacity: "text-white",
+                      barColor: "bg-primary",
+                      barFill: "w-[45%]"
+                    },
+                  ].map((step, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.15 * i }}
+                      className="py-4"
+                    >
+                      <div className="flex items-baseline gap-3 mb-2">
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">{step.phase}</span>
+                        <span className={`text-xl md:text-2xl font-display font-bold ${step.opacity}`}>{step.label}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mb-3">{step.sub}</p>
+                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "100%" }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.3 + 0.2 * i }}
+                          className={`h-full ${step.barColor} rounded-full ${step.barFill}`}
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+
+                  <div className="pt-4 border-t border-white/5 mt-4 flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-xs text-muted-foreground">Only UK-validated, high-intent opportunities pass through</span>
                   </div>
-                  <div className="text-4xl font-display font-bold text-white/50">Discovery</div>
-                  
-                  <div className="h-2 w-2/3 bg-primary/20 rounded-full overflow-hidden">
-                    <div className="h-full bg-primary w-full" />
-                  </div>
-                  <div className="text-4xl font-display font-bold text-white/70">Qualification</div>
-                  
-                  <div className="h-2 w-full bg-primary/20 rounded-full overflow-hidden">
-                    <div className="h-full bg-primary w-full shadow-[0_0_10px_rgba(var(--primary),0.5)]" />
-                  </div>
-                  <div className="text-4xl font-display font-bold text-white">Conversion</div>
                 </div>
               </div>
             </motion.div>
