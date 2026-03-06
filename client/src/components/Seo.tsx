@@ -37,7 +37,7 @@ export function Seo({
     setMetaTag("property", "og:description", description);
     setMetaTag("property", "og:type", ogType);
     setMetaTag("property", "og:locale", "en_GB");
-    setMetaTag("property", "og:site_name", "A.I.R.O - Intelligent Revenue Operations");
+    setMetaTag("property", "og:site_name", "AIRO - Intelligent Revenue Operations");
 
     const resolvedUrl = ogUrl || (typeof window !== "undefined" ? window.location.href : "");
     if (resolvedUrl) {
@@ -59,7 +59,7 @@ export function Seo({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "A.I.R.O - Intelligent Revenue Operations",
+    name: "AIRO - Intelligent Revenue Operations",
     description:
       "Seamless Revenue Engines: Capitalise on UK market share and bilateral global trade frameworks with AI-driven demand generation and high-touch human strategy.",
     url: typeof window !== "undefined" ? window.location.origin : "",

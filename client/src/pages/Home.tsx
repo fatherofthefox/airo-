@@ -35,8 +35,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       <Seo 
-        title="A.I.R.O | Intelligent Revenue Operations" 
-        description="Capitalise on UK market share and bilateral global trade frameworks. 25+ years of B2B expertise powering AI-driven demand generation with high-touch human strategy."
+        title="AIRO | UK Market Entry for Offshore Engineering Firms" 
+        description="AIRO architects £1M+ UK revenue pipelines for offshore engineering firms. Compliant UK market entry, 75% faster — leveraging the UK-India ETP and DUAA 2025 frameworks."
         ogImage="/favicon.png"
       />
 
@@ -51,7 +51,7 @@ export default function Home() {
             <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
               <TrendingUp className="text-primary-foreground w-5 h-5" />
             </div>
-            <span className="font-display font-bold text-xl tracking-tight">A.I.R.O</span>
+            <span className="font-display font-bold text-xl tracking-tight">AIRO</span>
           </a>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -179,8 +179,8 @@ export default function Home() {
                 {[
                   { label: "Traditional", months: 12, color: "bg-muted-foreground/30" },
                   { label: "Assisted", months: 8, color: "bg-muted-foreground/50" },
-                  { label: "A.I.R.O Phase 1", months: 5, color: "bg-primary/70" },
-                  { label: "A.I.R.O Full", months: 3, color: "bg-primary" },
+                  { label: "AIRO Phase 1", months: 5, color: "bg-primary/70" },
+                  { label: "AIRO Full", months: 3, color: "bg-primary" },
                 ].map((bar, i) => (
                   <div key={i} className="flex-1 flex flex-col items-center gap-2 relative z-10">
                     <motion.div
@@ -846,7 +846,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
                   <TrendingUp className="text-primary-foreground w-5 h-5" />
                 </div>
-                <span className="font-display font-bold text-lg text-foreground">A.I.R.O</span>
+                <span className="font-display font-bold text-lg text-foreground">AIRO</span>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Intelligent Revenue Operations for offshore engineering firms entering the UK market.
@@ -886,7 +886,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p>&copy; {new Date().getFullYear()} A.I.R.O — Intelligent Revenue Operations. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} AIRO — Intelligent Revenue Operations. All rights reserved.</p>
             <p className="text-xs text-muted-foreground/60">Registered in England & Wales</p>
           </div>
         </div>

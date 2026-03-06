@@ -171,7 +171,7 @@ export function LeadForm() {
                 </FormControl>
                 <div className="space-y-1 leading-tight">
                   <FormLabel className="text-sm font-normal text-muted-foreground cursor-pointer">
-                    I consent to A.I.R.O processing my data in accordance with the UK GDPR to provide revenue operations consultancy.
+                    I consent to AIRO processing my data in accordance with the UK GDPR to provide revenue operations consultancy.
                   </FormLabel>
                   <FormMessage />
                 </div>
@@ -211,7 +211,7 @@ export function LeadForm() {
                 </DialogHeader>
                 <div className="space-y-4 text-sm mt-4 text-foreground/80">
                   <p>
-                    <strong>1. Data Collection:</strong> A.I.R.O collects your name, email, and company details strictly for the purpose of providing revenue operations consultancy and related communications.
+                    <strong>1. Data Collection:</strong> AIRO collects your name, email, and company details strictly for the purpose of providing revenue operations consultancy and related communications.
                   </p>
                   <p>
                     <strong>2. UK GDPR Compliance:</strong> Your data is processed in full compliance with the UK General Data Protection Regulation (UK GDPR). We apply the principle of data minimisation.
