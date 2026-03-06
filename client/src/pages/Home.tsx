@@ -617,7 +617,7 @@ export default function Home() {
             className="text-4xl md:text-6xl font-display font-bold text-primary-foreground mb-8 tracking-tight"
             data-testid="text-cta-heading"
           >
-            Ready to scale your UK market share?
+            Bridge the Semantic Gap. Secure Your UK Market Entry.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -626,23 +626,24 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto"
           >
-            Leverage Intelligent Revenue Operations today. Unify your technology, data, and human strategy.
+            Eliminate expansion friction with a diagnostic GTM roadmap. Unify your technical edge with our sovereign Revenue Operations strategy.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            className="flex flex-col items-center gap-3"
           >
             <Button 
-              variant="secondary"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="font-bold text-lg group cta-glow-light shadow-lg"
+              className="font-bold text-lg group bg-[#1a1f2e] text-white border-0 shadow-none px-8 py-6"
               data-testid="button-cta-footer"
             >
-              Secure Your UK Market Audit
+              Request Your Strategic UK Market Audit
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
+            <span className="text-sm text-primary-foreground/60">Directly for CEOs &amp; Founders. 30-minute high-level diagnostic.</span>
           </motion.div>
         </div>
       </section>
