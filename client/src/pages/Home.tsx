@@ -98,9 +98,9 @@ export default function Home() {
         </div>
         <div className="relative z-10 mt-12 max-w-7xl mx-auto w-full">
           <p className="text-base md:text-xl lg:text-2xl text-muted-foreground font-semibold tracking-wide text-center leading-relaxed max-w-6xl mx-auto px-4">
-            Strategic Fractional COO/CRO | Scaling International Tech into the UK Market | Expert in Cross-Border Compliance, Legal, Tax &amp; Revenue Operations | AI-Driven Sales &amp; HITL Growth Systems
+            Strategic Fractional COO/CRO | Scaling B2B Tech into UK Markets | Expert in Cross-Border Compliance, Legal, Tax &amp; Revenue Operations | AI-Driven Sales &amp; HITL Growth Systems
           </p>
-          <p className="text-base md:text-xl lg:text-2xl text-primary font-bold tracking-wide text-center mt-3">
+          <p className="text-base md:text-xl lg:text-2xl text-primary font-bold tracking-wide text-center mt-8">
             Transforming your Offshore Operation into UK-Compliant Revenue Engine
           </p>
         </div>
