@@ -76,10 +76,13 @@ export default function Home() {
                 className="font-semibold group cta-glow"
                 data-testid="button-cta-hero"
               >
-                Book Your Revenue Audit
+                Secure Your UK Market Audit
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
+            <p className="text-sm text-muted-foreground font-medium tracking-wide">
+              Bilateral Trade Specialist | Revenue Operations | UK Compliance | HITL Growth Methodologies | AI Sales Agents
+            </p>
           </motion.div>
 
           <motion.div
@@ -391,7 +394,7 @@ export default function Home() {
               className="font-bold text-lg group cta-glow-light"
               data-testid="button-cta-footer"
             >
-              Book Your Revenue Audit
+              Secure Your UK Market Audit
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
