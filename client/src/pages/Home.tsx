@@ -62,13 +62,13 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium">
               <Zap className="w-4 h-4" />
-              <span>Next-Gen Revenue Architecture</span>
+              <span>Seamless UK Market Entry for Engineering Leaders</span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold font-display leading-[1.1] tracking-tight" data-testid="text-hero-heading">
-              Seamless <span className="text-gradient">Revenue</span> Engines.
+              UK Sovereign <span className="text-gradient">Growth</span> Partner.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl" data-testid="text-hero-description">
-              Integrating AI-driven demand generation with high-touch human strategy. We architect predictable, scalable growth for B2B enterprises.
+              Providing strategic local presence, with "Human-in-the-Loop" intelligence, and AI-driven demand engines required to convert your technical excellence into UK B2B contracts. Architecting predictable £1M+ pipelines through Bilateral Trade expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button 
