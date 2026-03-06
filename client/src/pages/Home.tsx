@@ -220,8 +220,50 @@ export default function Home() {
         Bilateral Trade, Revenue Operations, AI Market Intelligence Agents, Strategic Partnership Architecture
       </div>
 
+      {/* Social Proof — Trust Bar */}
+      <section className="py-12 bg-card relative z-10 border-y border-white/5" data-testid="section-trust-bar">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center space-y-8"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              Trusted by Engineering Firms Across Europe & Asia
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+              {[
+                { name: "Hotovo", url: "https://www.hotovo.com" },
+                { name: "UCR Group", url: "https://ucrgroup.co" },
+                { name: "Adaptie", url: "https://www.adaptie.me/en" },
+              ].map((client, i) => (
+                <motion.a
+                  key={i}
+                  href={client.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 * i }}
+                  className="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid={`link-trust-${i}`}
+                >
+                  <div className="w-10 h-10 rounded bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/30 transition-colors">
+                    <span className="text-lg font-display font-bold text-primary">{client.name.charAt(0)}</span>
+                  </div>
+                  <span className="text-sm font-semibold tracking-wide">{client.name}</span>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* The 2026 Market Reality — Dark-Mode Insight Panel */}
-      <section className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-edutainment">
+      <section className="py-24 bg-background relative z-10" data-testid="section-edutainment">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -255,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* Market Readiness Scorecard */}
-      <section id="readiness" className="py-24 bg-background relative z-10" data-testid="section-readiness">
+      <section id="readiness" className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-readiness">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div
@@ -293,7 +335,7 @@ export default function Home() {
       </section>
 
       {/* AI Market Intelligence Agents */}
-      <section id="ai-agents" className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-ai-agents">
+      <section id="ai-agents" className="py-24 bg-background relative z-10" data-testid="section-ai-agents">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,7 +442,7 @@ export default function Home() {
       </section>
 
       {/* Capabilities Section — 3-Column Grid */}
-      <section id="capabilities" className="py-24 bg-background relative z-10">
+      <section id="capabilities" className="py-24 bg-card relative z-10 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
@@ -455,7 +497,7 @@ export default function Home() {
       </section>
 
       {/* The B2B Sales Engine — Bridging Technical Excellence to Local Markets */}
-      <section className="py-24 bg-card relative z-10 border-y border-white/5">
+      <section className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
@@ -519,7 +561,7 @@ export default function Home() {
 
       {/* Frameworks Section */}
       {/* Precision Qualification */}
-      <section id="frameworks" className="py-24 bg-background relative overflow-hidden">
+      <section id="frameworks" className="py-24 bg-card relative overflow-hidden border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div 
@@ -638,7 +680,7 @@ export default function Home() {
       </section>
 
       {/* Lead Conversion Engine — Interactive Blueprint */}
-      <section id="lead-engine" className="py-24 bg-card relative z-10 border-y border-white/5" aria-label="Improving Lead Generation in 2026" data-testid="section-lead-engine">
+      <section id="lead-engine" className="py-24 bg-background relative z-10" aria-label="Improving Lead Generation in 2026" data-testid="section-lead-engine">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <motion.div
@@ -676,7 +718,7 @@ export default function Home() {
       </section>
 
       {/* The 2026 UK Market Arbitrage Tool */}
-      <section className="py-24 bg-background relative z-10" data-testid="section-calculator">
+      <section className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-calculator">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -698,7 +740,7 @@ export default function Home() {
       </section>
 
       {/* Form / Lead Section */}
-      <section id="contact" className="py-24 bg-card relative z-10 border-y border-white/5">
+      <section id="contact" className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div 
