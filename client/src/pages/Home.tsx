@@ -97,8 +97,8 @@ export default function Home() {
           </motion.div>
         </div>
         <div className="relative z-10 mt-12 max-w-7xl mx-auto w-full">
-          <p className="text-lg md:text-2xl text-muted-foreground font-semibold tracking-wide text-center whitespace-nowrap">
-            Bilateral Trade Specialist | Revenue Operations | UK Compliance | HITL Growth Methodologies | AI Sales Agents
+          <p className="text-sm md:text-lg text-muted-foreground font-semibold tracking-wide text-center whitespace-nowrap">
+            Strategic Fractional COO | Transforming Offshore Operations into UK-Compliant Revenue Engines | AI Sales Agents | Legal, Insurance &amp; Tax Infrastructure for Global Scale
           </p>
         </div>
       </section>
