@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* Capabilities Section — 3-Column Grid */}
-      <section id="capabilities" className="py-24 bg-background relative z-10">
+      <section id="capabilities" className="py-24 bg-card relative z-10 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
