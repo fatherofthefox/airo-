@@ -192,11 +192,11 @@ export default function Home() {
                 The 2026 Market Reality
               </span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight" data-testid="text-edutainment-heading">
-                The Efficiency Gap: Why Traditional<br className="hidden md:block" /> Outbound Stalls at the <span className="text-destructive">UK Border</span>.
+                The Efficiency Gap: Universal Technical<br className="hidden md:block" /> Excellence <span className="text-destructive">Isn't Enough</span>.
               </h2>
               <div className="max-w-3xl mx-auto space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-edutainment-description">
-                  Most international expansions fail not due to lack of effort, but due to "Volume-First" friction. Generic AI outreach in the UK market creates "digital noise" that senior B2B decision-makers now systematically ignore.
+                  Most expansions stall due to semantic misalignments — missing the subtle professional nuances and unwritten etiquette required to close deals. AIRO provides the commercial knowledge, semantically precise, and perfectly aligned with UK-specific business logic, to secure high-stakes UK contracts.
                 </p>
                 <p className="text-lg text-foreground font-medium leading-relaxed">
                   We don't just "prospect"; we architect <span className="text-primary">Intelligent Growth Systems</span> that bridge the gap between AI scale and human-level nuance.
