@@ -18,7 +18,7 @@ const slides = [
   },
   {
     number: 2,
-    title: "Instant Qualification (The 0-Minute Response)",
+    title: "Instant Qualification (The Zero-Minute Response)",
     icon: <MessageCircle className="w-7 h-7" />,
     concept: "Lead decay is real. If you wait 10 minutes, you\u2019ve lost them.",
     action:
