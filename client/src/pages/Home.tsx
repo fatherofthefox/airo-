@@ -542,7 +542,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="space-y-6 lg:sticky lg:top-28"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 text-accent text-sm font-medium">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 text-emerald-400 text-sm font-medium">
                 <BarChart3 className="w-4 h-4" />
                 <span>Interactive Blueprint</span>
               </div>
