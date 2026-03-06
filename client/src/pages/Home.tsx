@@ -200,92 +200,114 @@ export default function Home() {
               </div>
             </div>
 
-            {/* System Flow Diagram */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 py-8"
-            >
-              <div className="flex flex-col items-center gap-2 px-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Bot className="w-8 h-8 text-primary" />
-                </div>
-                <span className="text-sm font-semibold">AI Input</span>
-                <span className="text-[10px] text-muted-foreground">Signal Detection</span>
-              </div>
+          </motion.div>
+        </div>
+      </section>
 
-              <div className="hidden md:block w-16 h-px bg-gradient-to-r from-primary/50 to-accent/50 relative">
-                <ArrowRight className="w-4 h-4 text-primary absolute -right-2 -top-2" />
-              </div>
-              <div className="md:hidden h-8 w-px bg-gradient-to-b from-primary/50 to-accent/50 relative">
-                <ArrowRight className="w-4 h-4 text-primary absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
-              </div>
-
-              <div className="flex flex-col items-center gap-2 px-6">
-                <div className="w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                  <UserCheck className="w-8 h-8 text-emerald-400" />
-                </div>
-                <span className="text-sm font-semibold">HITL Filter</span>
-                <span className="text-[10px] text-muted-foreground">Risk Mitigation</span>
-              </div>
-
-              <div className="hidden md:block w-16 h-px bg-gradient-to-r from-accent/50 to-emerald-500/50 relative">
-                <ArrowRight className="w-4 h-4 text-emerald-400 absolute -right-2 -top-2" />
-              </div>
-              <div className="md:hidden h-8 w-px bg-gradient-to-b from-accent/50 to-emerald-500/50 relative">
-                <ArrowRight className="w-4 h-4 text-emerald-400 absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
-              </div>
-
-              <div className="flex flex-col items-center gap-2 px-6">
-                <div className="w-16 h-16 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                  <FileCheck className="w-8 h-8 text-emerald-400" />
-                </div>
-                <span className="text-sm font-semibold">Qualified UK Contract</span>
-                <span className="text-[10px] text-muted-foreground">Compliant &amp; Verified</span>
-              </div>
-            </motion.div>
-
-            <p className="text-center text-sm text-muted-foreground italic max-w-2xl mx-auto">
-              "AI finds the signal; our UK experts provide the cultural and legal verification required to close."
+      {/* AI Market Intelligence Agents */}
+      <section className="py-24 bg-background relative z-10" data-testid="section-ai-agents">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center space-y-6"
+          >
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400 border border-emerald-400/30 bg-emerald-400/5 px-4 py-2 rounded">
+              AI Market Intelligence Agents
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold">From Signal to Signed Contract</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Our AI agents detect market intent, while HITL experts verify cultural and legal fit — delivering only UK-validated, compliant opportunities to your pipeline.
             </p>
+          </motion.div>
 
-            {/* Glassmorphism Metric Cards */}
-            <div className="grid sm:grid-cols-3 gap-6 pt-4">
-              {[
-                {
-                  stat: "92%",
-                  label: "Market Rejection Rate",
-                  desc: "For generic, non-compliant automated outreach in 2026."
-                },
-                {
-                  stat: "4.2\u00d7",
-                  label: "Pipeline Velocity",
-                  desc: "Achieved through HITL-verified B2B engagement."
-                },
-                {
-                  stat: "< 15 min",
-                  label: "Lead Response Time",
-                  desc: 'Industry-leading latency for "Hot-to-Human" handovers.'
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * i }}
-                  className="glass-panel rounded p-6 text-center space-y-3"
-                  data-testid={`text-stat-${i}`}
-                >
-                  <div className="text-4xl md:text-5xl font-display font-bold text-primary">{item.stat}</div>
-                  <div className="text-sm font-semibold text-foreground uppercase tracking-wider">{item.label}</div>
-                  <div className="text-xs text-muted-foreground leading-relaxed">{item.desc}</div>
-                </motion.div>
-              ))}
+          {/* System Flow Diagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 py-8"
+          >
+            <div className="flex flex-col items-center gap-2 px-6">
+              <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <Bot className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm font-semibold">AI Input</span>
+              <span className="text-[10px] text-muted-foreground">Signal Detection</span>
+            </div>
+
+            <div className="hidden md:block w-16 h-px bg-gradient-to-r from-primary/50 to-accent/50 relative">
+              <ArrowRight className="w-4 h-4 text-primary absolute -right-2 -top-2" />
+            </div>
+            <div className="md:hidden h-8 w-px bg-gradient-to-b from-primary/50 to-accent/50 relative">
+              <ArrowRight className="w-4 h-4 text-primary absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
+            </div>
+
+            <div className="flex flex-col items-center gap-2 px-6">
+              <div className="w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <UserCheck className="w-8 h-8 text-emerald-400" />
+              </div>
+              <span className="text-sm font-semibold">HITL Filter</span>
+              <span className="text-[10px] text-muted-foreground">Risk Mitigation</span>
+            </div>
+
+            <div className="hidden md:block w-16 h-px bg-gradient-to-r from-accent/50 to-emerald-500/50 relative">
+              <ArrowRight className="w-4 h-4 text-emerald-400 absolute -right-2 -top-2" />
+            </div>
+            <div className="md:hidden h-8 w-px bg-gradient-to-b from-accent/50 to-emerald-500/50 relative">
+              <ArrowRight className="w-4 h-4 text-emerald-400 absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
+            </div>
+
+            <div className="flex flex-col items-center gap-2 px-6">
+              <div className="w-16 h-16 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                <FileCheck className="w-8 h-8 text-emerald-400" />
+              </div>
+              <span className="text-sm font-semibold">Qualified UK Contract</span>
+              <span className="text-[10px] text-muted-foreground">Compliant &amp; Verified</span>
             </div>
           </motion.div>
+
+          <p className="text-center text-sm text-muted-foreground italic max-w-2xl mx-auto">
+            "AI finds the signal; our UK experts provide the cultural and legal verification required to close."
+          </p>
+
+          {/* Glassmorphism Metric Cards */}
+          <div className="grid sm:grid-cols-3 gap-6 pt-4">
+            {[
+              {
+                stat: "92%",
+                label: "Market Rejection Rate",
+                desc: "For generic, non-compliant automated outreach in 2026."
+              },
+              {
+                stat: "4.2\u00d7",
+                label: "Pipeline Velocity",
+                desc: "Achieved through HITL-verified B2B engagement."
+              },
+              {
+                stat: "< 15 min",
+                label: "Lead Response Time",
+                desc: 'Industry-leading latency for "Hot-to-Human" handovers.'
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="glass-panel rounded p-6 text-center space-y-3"
+                data-testid={`text-stat-${i}`}
+              >
+                <div className="text-4xl md:text-5xl font-display font-bold text-primary">{item.stat}</div>
+                <div className="text-sm font-semibold text-foreground uppercase tracking-wider">{item.label}</div>
+                <div className="text-xs text-muted-foreground leading-relaxed">{item.desc}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
