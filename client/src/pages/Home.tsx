@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe, Bot, UserCheck, FileCheck } from "lucide-react";
+import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe, Bot, UserCheck, FileCheck, ClipboardCheck } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
@@ -607,13 +607,41 @@ export default function Home() {
             </motion.div>
 
             <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <LeadCarousel />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Readiness Scorecard */}
+      <section id="readiness" className="py-24 bg-background relative z-10" data-testid="section-readiness">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-2"
+              transition={{ duration: 0.6 }}
+              className="space-y-6 lg:sticky lg:top-28"
             >
-              <MarketScorecard />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium">
+                <ClipboardCheck className="w-4 h-4" />
+                <span>Market Readiness Scorecard</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-display font-bold" data-testid="text-readiness-heading">
+                Is Your Firm Ready for the London Market?
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Before engaging AIRO, assess where your organisation stands. This 60-second scorecard evaluates your case studies, compliance posture, UK presence, and commercial readiness — giving you a clear picture of what's needed to win enterprise contracts in the UK.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                CEOs and CTOs across Bangalore, Colombo, and the Gulf use this tool to benchmark their UK market readiness before committing resources to market entry.
+              </p>
             </motion.div>
 
             <motion.div
@@ -622,7 +650,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <LeadCarousel />
+              <MarketScorecard />
             </motion.div>
           </div>
         </div>
