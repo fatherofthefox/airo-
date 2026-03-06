@@ -252,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* AI Market Intelligence Agents */}
-      <section id="ai-agents" className="py-24 bg-background relative z-10" data-testid="section-ai-agents">
+      <section id="ai-agents" className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-ai-agents">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -359,7 +359,7 @@ export default function Home() {
       </section>
 
       {/* Capabilities Section — 3-Column Grid */}
-      <section id="capabilities" className="py-24 bg-card relative z-10 border-y border-white/5">
+      <section id="capabilities" className="py-24 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
@@ -657,7 +657,7 @@ export default function Home() {
       </section>
 
       {/* Form / Lead Section */}
-      <section id="contact" className="py-24 bg-background relative z-10">
+      <section id="contact" className="py-24 bg-card relative z-10 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div 
