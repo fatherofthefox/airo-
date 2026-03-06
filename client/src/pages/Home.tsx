@@ -101,7 +101,7 @@ export default function Home() {
             Strategic Fractional COO/CRO | Scaling International Tech into the UK Market | Expert in Cross-Border Compliance, Legal, Tax &amp; Revenue Operations | AI-Driven Sales &amp; HITL Growth Systems
           </p>
           <p className="text-base md:text-xl lg:text-2xl text-primary font-bold tracking-wide text-center mt-3">
-            Transforming Offshore Operations into UK-Compliant Revenue Engines
+            Transforming your Offshore Operation into UK-Compliant Revenue Engine
           </p>
         </div>
       </section>
