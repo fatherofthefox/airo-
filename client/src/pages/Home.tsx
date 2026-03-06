@@ -360,7 +360,7 @@ export default function Home() {
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary border border-primary/30 bg-primary/5 px-4 py-2 rounded">
               25+ Years of B2B Sales Engineering
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold">Your Technical Excellence Deserves a Local Sales Engine</h2>
+            <h2 className="text-3xl md:text-5xl font-display font-bold">Global Innovation. Local Execution. Predicted Revenue.</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               International trade frictions and semantic misalignments stall even the strongest offshore teams. AIRO bridges the gap — converting your engineering capability into a fully operational UK revenue machine through our "Gold Standard" tech stack and local market intelligence.
             </p>
