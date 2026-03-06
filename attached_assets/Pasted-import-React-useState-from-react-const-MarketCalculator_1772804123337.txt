@@ -1,0 +1,61 @@
+import React, { useState } from 'react';
+
+const MarketCalculator = () => {
+  const [dailyRate, setDailyRate] = useState(400);
+  const [teamSize, setTeamSize] = useState(5);
+  const [ukPremium, setUkPremium] = useState(1.8); // The "Local Presence" multiplier
+
+  const currentRevenue = dailyRate * teamSize * 20; // Monthly
+  const ukPotentialRevenue = (dailyRate * ukPremium) * teamSize * 20;
+  const arbitrageValue = ukPotentialRevenue - currentRevenue;
+
+  return (
+    <div className="bg-slate-900 p-8 rounded-3xl border border-blue-500/30 shadow-2xl text-white max-w-2xl mx-auto">
+      <div className="mb-8">
+        <h3 className="text-2xl font-bold text-blue-400 mb-2 underline italic">UK Market Value Realisation</h3>
+        <p className="text-slate-400 text-sm">Calculate the revenue delta of shifting from "Offshore Vendor" to "UK Strategic Partner".</p>
+      </div>
+
+      <div className="space-y-6">
+        <div>
+          <label className="block text-xs uppercase tracking-widest text-slate-500 mb-2 font-bold">Current Daily Rate ($)</label>
+          <input 
+            type="range" min="200" max="1000" step="50" 
+            value={dailyRate} onChange={(e) => setDailyRate(parseInt(e.target.value))}
+            className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500"
+          />
+          <div className="flex justify-between mt-2 font-mono text-blue-400">
+            <span>$200</span>
+            <span className="text-xl font-bold">${dailyRate}</span>
+            <span>$1000</span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8 py-6 border-t border-slate-800">
+          <div className="text-center p-4 bg-slate-800/50 rounded-xl">
+            <span className="block text-slate-500 text-xs mb-1">Current Monthly Rev</span>
+            <span className="text-2xl font-bold">${currentRevenue.toLocaleString()}</span>
+          </div>
+          <div className="text-center p-4 bg-blue-600/20 rounded-xl border border-blue-500/50">
+            <span className="block text-blue-400 text-xs mb-1 italic font-bold">UK Managed Revenue</span>
+            <span className="text-2xl font-bold text-blue-400">${ukPotentialRevenue.toLocaleString()}</span>
+          </div>
+        </div>
+
+        <div className="bg-blue-600 p-6 rounded-2xl text-center shadow-lg shadow-blue-500/20">
+          <p className="text-sm uppercase tracking-tighter font-bold opacity-80">Monthly Growth Opportunity</p>
+          <h2 className="text-4xl font-black italic mt-1">+${arbitrageValue.toLocaleString()}</h2>
+          <p className="text-xs mt-3 opacity-90 leading-relaxed">
+            *Based on UK-India ETP 2026 trade premiums and AI-driven "Human-in-the-Loop" UK presence.
+          </p>
+        </div>
+
+        <button className="w-full bg-white text-slate-900 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-blue-400 transition-all">
+          Get Your Full UK Entry Audit
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default MarketCalculator;

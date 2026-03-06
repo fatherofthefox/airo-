@@ -3,6 +3,7 @@ import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Data
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
+import { MarketCalculator } from "@/components/MarketCalculator";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -208,6 +209,28 @@ export default function Home() {
             </div>
 
           </motion.div>
+        </div>
+      </section>
+
+      {/* The 2026 UK Market Arbitrage Tool */}
+      <section className="py-24 bg-background relative z-10" data-testid="section-calculator">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 space-y-4"
+          >
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary border border-primary/30 bg-primary/5 px-4 py-2 rounded">
+              The 2026 UK Market Arbitrage Tool
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold">Quantify Your UK Revenue Opportunity</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See the revenue delta when you shift from "offshore vendor" to "UK strategic partner" — powered by bilateral trade premiums and HITL local presence.
+            </p>
+          </motion.div>
+          <MarketCalculator />
         </div>
       </section>
 
