@@ -348,18 +348,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Expertise — Detailed 2×2 Grid */}
+      {/* The B2B Sales Engine — Bridging Technical Excellence to Local Markets */}
       <section className="py-24 bg-card relative z-10 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             variants={fadeInUp}
             initial="initial"
             whileInView="whileInView"
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-4xl mx-auto mb-16 space-y-6"
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">25+ Years of B2B Expertise</h2>
-            <p className="text-lg text-muted-foreground">
-              We leverage a "Gold Standard" tech stack, including Apollo, Reply.io, and leading CRM systems to optimise every phase of the customer journey.
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary border border-primary/30 bg-primary/5 px-4 py-2 rounded">
+              25+ Years of B2B Sales Engineering
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold">Your Technical Excellence Deserves a Local Sales Engine</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              International trade frictions and semantic misalignments stall even the strongest offshore teams. AIRO bridges the gap — converting your engineering capability into a fully operational UK revenue machine through our "Gold Standard" tech stack and local market intelligence.
             </p>
           </motion.div>
 
@@ -373,22 +376,22 @@ export default function Home() {
               {
                 icon: <Database className="w-8 h-8 text-primary" />,
                 title: "Data Architecture",
-                desc: "Precision targeting using intent signals and demographic enrichment via Apollo."
+                desc: "AIRO eliminates semantic misalignments at the data layer. We deploy Apollo-driven intent signals and demographic enrichment calibrated for UK buyer personas — so your outreach resonates locally, not generically."
               },
               {
-                icon: <Zap className="w-8 h-8 text-accent" />,
+                icon: <Zap className="w-8 h-8 text-emerald-400" />,
                 title: "AI Sales Agents",
-                desc: "Automated, hyper-personalised outreach sequences orchestrated through Reply.io."
+                desc: "Our AI agents don't just automate — they localise. Hyper-personalised outreach sequences via Reply.io, engineered to navigate UK-specific trade frictions and professional etiquette that generic platforms miss."
               },
               {
                 icon: <ShieldCheck className="w-8 h-8 text-primary" />,
-                title: "CRM Integration",
-                desc: "Flawless bidirectional syncing ensuring single-source-of-truth reliability."
+                title: "CRM &amp; Compliance Bridge",
+                desc: "AIRO acts as the essential bridge between your offshore operations and UK regulatory reality. Flawless bidirectional CRM syncing with built-in compliance guardrails — single-source-of-truth reliability, locally verified."
               },
               {
-                icon: <Users className="w-8 h-8 text-accent" />,
+                icon: <Users className="w-8 h-8 text-emerald-400" />,
                 title: "Human-in-the-Loop (HITL)",
-                desc: "Our human-in-the-loop engine fuses AI intent signals with the personal touch required to close deals. Automating prospecting so your team can focus on building high-value relationships."
+                desc: "Where AI finds the signal, our UK experts provide cultural and legal verification. AIRO's HITL engine mitigates international trade frictions by fusing AI intent signals with the personal nuance required to close high-stakes B2B contracts."
               }
             ].map((feature, i) => (
               <motion.div 
