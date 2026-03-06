@@ -109,12 +109,64 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
+            data-testid="hero-dashboard"
           >
-            <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center relative bg-gradient-to-br from-white/5 to-transparent">
-              <div className="absolute inset-4 rounded-full border border-primary/20 animate-[spin_60s_linear_infinite]" />
-              <div className="absolute inset-12 rounded-full border border-accent/20 animate-[spin_40s_linear_infinite_reverse]" />
-              <div className="w-32 h-32 rounded-full bg-primary/20 blur-xl absolute" />
-              <BarChart3 className="w-20 h-20 text-primary relative z-10" />
+            <div className="bg-card rounded shadow-2xl border border-white/10 p-6 lg:p-8 space-y-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-widest">Performance Dashboard</p>
+                  <h3 className="text-lg font-display font-bold mt-1">Time to UK Compliance</h3>
+                </div>
+                <div className="flex items-center gap-2 bg-accent/10 text-accent px-3 py-1 rounded text-xs font-semibold">
+                  <TrendingUp className="w-3 h-3" />
+                  75% faster
+                </div>
+              </div>
+
+              <div className="relative h-48 flex items-end gap-3 px-2">
+                <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
+                  {[12, 9, 6, 3, 0].map((val) => (
+                    <div key={val} className="flex items-center gap-2">
+                      <span className="text-[10px] text-muted-foreground w-6 text-right">{val}m</span>
+                      <div className="flex-1 border-t border-white/5" />
+                    </div>
+                  ))}
+                </div>
+
+                {[
+                  { label: "Traditional", months: 12, color: "bg-muted-foreground/30" },
+                  { label: "Assisted", months: 8, color: "bg-muted-foreground/50" },
+                  { label: "A.I.R.O Phase 1", months: 5, color: "bg-primary/70" },
+                  { label: "A.I.R.O Full", months: 3, color: "bg-primary" },
+                ].map((bar, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-center gap-2 relative z-10">
+                    <motion.div
+                      initial={{ height: 0 }}
+                      animate={{ height: `${(bar.months / 12) * 100}%` }}
+                      transition={{ duration: 1, delay: 0.3 + i * 0.15, ease: "easeOut" }}
+                      className={`w-full rounded-t ${bar.color} relative`}
+                    >
+                      <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-bold text-foreground whitespace-nowrap">
+                        {bar.months}mo
+                      </span>
+                    </motion.div>
+                    <span className="text-[9px] text-muted-foreground text-center leading-tight mt-1">{bar.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-2 border-t border-white/5">
+                {[
+                  { label: "Compliance Speed", value: "3 months" },
+                  { label: "Cost Reduction", value: "60%" },
+                  { label: "Risk Score", value: "Low" },
+                ].map((metric, i) => (
+                  <div key={i} className="text-center">
+                    <p className="text-lg font-display font-bold text-primary">{metric.value}</p>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{metric.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
