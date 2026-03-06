@@ -80,9 +80,6 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground font-medium tracking-wide">
-              Bilateral Trade Specialist | Revenue Operations | UK Compliance | HITL Growth Methodologies | AI Sales Agents
-            </p>
           </motion.div>
 
           <motion.div
@@ -91,7 +88,6 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            {/* Abstract visual representation of a revenue engine */}
             <div className="aspect-square rounded-full border border-white/10 flex items-center justify-center relative bg-gradient-to-br from-white/5 to-transparent">
               <div className="absolute inset-4 rounded-full border border-primary/20 animate-[spin_60s_linear_infinite]" />
               <div className="absolute inset-12 rounded-full border border-accent/20 animate-[spin_40s_linear_infinite_reverse]" />
@@ -99,6 +95,11 @@ export default function Home() {
               <BarChart3 className="w-20 h-20 text-primary relative z-10" />
             </div>
           </motion.div>
+        </div>
+        <div className="relative z-10 mt-12 max-w-7xl mx-auto w-full">
+          <p className="text-lg md:text-2xl text-muted-foreground font-semibold tracking-wide text-center whitespace-nowrap">
+            Bilateral Trade Specialist | Revenue Operations | UK Compliance | HITL Growth Methodologies | AI Sales Agents
+          </p>
         </div>
       </section>
 
