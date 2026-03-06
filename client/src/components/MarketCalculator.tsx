@@ -28,12 +28,14 @@ export function MarketCalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">Current Daily Rate ($)</label>
+          <label htmlFor="daily-rate" className="block text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">Current Daily Rate ($)</label>
           <input
+            id="daily-rate"
             type="range" min="200" max="1000" step="50"
             value={dailyRate}
             onChange={(e) => setDailyRate(parseInt(e.target.value))}
             className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
+            aria-valuemin={200} aria-valuemax={1000} aria-valuenow={dailyRate} aria-valuetext={`$${dailyRate} per day`}
             data-testid="input-daily-rate"
           />
           <div className="flex justify-between mt-2 font-mono text-primary">
@@ -44,12 +46,14 @@ export function MarketCalculator() {
         </div>
 
         <div>
-          <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">Engineering Team Size</label>
+          <label htmlFor="team-size" className="block text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">Engineering Team Size</label>
           <input
+            id="team-size"
             type="range" min="1" max="30" step="1"
             value={teamSize}
             onChange={(e) => setTeamSize(parseInt(e.target.value))}
             className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
+            aria-valuemin={1} aria-valuemax={30} aria-valuenow={teamSize} aria-valuetext={`${teamSize} engineers`}
             data-testid="input-team-size"
           />
           <div className="flex justify-between mt-2 font-mono text-primary">

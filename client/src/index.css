@@ -95,3 +95,11 @@
 .cta-glow-light {
   animation: glow-pulse-light 2.5s ease-in-out infinite;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}

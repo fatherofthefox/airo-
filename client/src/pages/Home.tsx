@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe, Bot, UserCheck, FileCheck, ClipboardCheck } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe, Bot, UserCheck, FileCheck, ClipboardCheck, Menu, X, Linkedin } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
@@ -7,7 +8,16 @@ import { MarketCalculator } from "@/components/MarketCalculator";
 import { MarketScorecard } from "@/components/MarketScorecard";
 import { Button } from "@/components/ui/button";
 
+const navLinks = [
+  { href: "#capabilities", label: "Solutions" },
+  { href: "#lead-engine", label: "Case Studies" },
+  { href: "#frameworks", label: "UK Compliance" },
+  { href: "#ai-agents", label: "Market Intelligence Agents" },
+];
+
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -30,50 +40,81 @@ export default function Home() {
         ogImage="/favicon.png"
       />
 
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded">
+        Skip to main content
+      </a>
+
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md" aria-label="Main navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2" data-testid="link-home">
+          <a href="#" className="flex items-center gap-2" data-testid="link-home">
             <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
               <TrendingUp className="text-primary-foreground w-5 h-5" />
             </div>
             <span className="font-display font-bold text-xl tracking-tight">A.I.R.O</span>
-          </div>
+          </a>
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#capabilities"
-              className="text-sm text-muted-foreground transition-colors"
-              data-testid="link-solutions"
-            >
-              Solutions
-            </a>
-            <a
-              href="#lead-engine"
-              className="text-sm text-muted-foreground transition-colors"
-              data-testid="link-case-studies"
-            >
-              Case Studies
-            </a>
-            <a
-              href="#frameworks"
-              className="text-sm text-muted-foreground transition-colors"
-              data-testid="link-compliance"
-            >
-              UK Compliance
-            </a>
-            <a
-              href="#ai-agents"
-              className="text-sm text-muted-foreground transition-colors"
-              data-testid="link-ai-agents"
-            >
-              Market Intelligence Agents
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid={`link-${link.href.slice(1)}`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            data-testid="button-mobile-menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden bg-background/95 backdrop-blur-lg border-b border-white/5 overflow-hidden"
+            >
+              <div className="px-4 py-6 space-y-1">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-4 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded transition-colors"
+                    data-testid={`link-mobile-${link.href.slice(1)}`}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <div className="pt-4 px-4">
+                  <Button
+                    onClick={() => { setMobileMenuOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+                    className="w-full font-semibold cta-glow"
+                    data-testid="button-mobile-cta"
+                  >
+                    Secure Your UK Market Audit
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 bg-grid-white">
+      <section id="main-content" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 bg-grid-white">
         <div className="absolute inset-0 bg-background/90" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
         
@@ -755,13 +796,57 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-white/5 text-center text-muted-foreground text-sm">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <TrendingUp className="w-4 h-4 text-primary" />
-            <span className="font-display font-semibold text-foreground">A.I.R.O</span>
+      <footer className="py-16 border-t border-white/5 text-muted-foreground text-sm" aria-label="Footer">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
+                  <TrendingUp className="text-primary-foreground w-5 h-5" />
+                </div>
+                <span className="font-display font-bold text-lg text-foreground">A.I.R.O</span>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Intelligent Revenue Operations for offshore engineering firms entering the UK market.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-display font-semibold text-foreground">Quick Links</h4>
+              <div className="space-y-2">
+                {navLinks.map((link) => (
+                  <a key={link.href} href={link.href} className="block text-muted-foreground hover:text-foreground transition-colors" data-testid={`link-footer-${link.href.slice(1)}`}>
+                    {link.label}
+                  </a>
+                ))}
+                <a href="#contact" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-contact">
+                  Contact
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-display font-semibold text-foreground">Connect</h4>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-linkedin"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                UK GDPR Compliant. Data processed under lawful basis of legitimate interest for B2B communications.
+              </p>
+            </div>
           </div>
-          <p>&copy; {new Date().getFullYear()} Intelligent Revenue Operations. All rights reserved.</p>
+
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p>&copy; {new Date().getFullYear()} A.I.R.O — Intelligent Revenue Operations. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground/60">Registered in England & Wales</p>
+          </div>
         </div>
       </footer>
     </div>
