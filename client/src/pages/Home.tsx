@@ -60,13 +60,6 @@ export default function Home() {
               UK Compliance
             </a>
           </div>
-          <Button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-sm font-semibold shadow-md"
-            data-testid="button-cta-nav"
-          >
-            Secure Your UK Market Audit
-          </Button>
         </div>
       </nav>
 
