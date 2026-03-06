@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe } from "lucide-react";
+import { CheckCircle2, TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, Database, Users, AlertTriangle, Scale, Globe, Bot, UserCheck, FileCheck } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { LeadForm } from "@/components/LeadForm";
 import { LeadCarousel } from "@/components/LeadCarousel";
@@ -177,31 +177,102 @@ export default function Home() {
         Bilateral Trade, Revenue Operations, AI Sales Agents, Sales Workflow Optimisation
       </div>
 
-      {/* Edutainment Hook */}
-      <section className="py-20 bg-card relative z-10 border-y border-white/5" data-testid="section-edutainment">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* The 2026 Market Reality — Dark-Mode Insight Panel */}
+      <section className="py-24 bg-card relative z-10 border-y border-white/5" data-testid="section-edutainment">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center space-y-6"
+            className="space-y-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-destructive/30 bg-destructive/10 text-destructive text-sm font-medium">
-              <AlertTriangle className="w-4 h-4" />
-              <span>Industry Reality Check</span>
+            <div className="text-center space-y-6">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary border border-primary/30 bg-primary/5 px-4 py-2 rounded">
+                The 2026 Market Reality
+              </span>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight" data-testid="text-edutainment-heading">
+                The Efficiency Gap: Why Traditional<br className="hidden md:block" /> Outbound Stalls at the <span className="text-destructive">UK Border</span>.
+              </h2>
+              <div className="max-w-3xl mx-auto space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-edutainment-description">
+                  Most international expansions fail not due to lack of effort, but due to "Volume-First" friction. Generic AI outreach in the UK market creates "digital noise" that senior B2B decision-makers now systematically ignore.
+                </p>
+                <p className="text-lg text-foreground font-medium leading-relaxed">
+                  We don't just "prospect"; we architect <span className="text-primary">Intelligent Growth Systems</span> that bridge the gap between AI scale and human-level nuance.
+                </p>
+              </div>
             </div>
-            <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight" data-testid="text-edutainment-heading">
-              Why <span className="text-destructive">90%</span> of bizdev agencies fail in their first year?
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto" data-testid="text-edutainment-description">
-              They rely on volume over value. Cold lists, generic outreach, and zero personalisation. The agencies that survive build intelligent systems — ones that blend AI-powered prospecting with genuine human relationships.
+
+            {/* System Flow Diagram */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 py-8"
+            >
+              <div className="flex flex-col items-center gap-2 px-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <Bot className="w-8 h-8 text-primary" />
+                </div>
+                <span className="text-sm font-semibold">AI Input</span>
+                <span className="text-[10px] text-muted-foreground">Signal Detection</span>
+              </div>
+
+              <div className="hidden md:block w-16 h-px bg-gradient-to-r from-primary/50 to-accent/50 relative">
+                <ArrowRight className="w-4 h-4 text-primary absolute -right-2 -top-2" />
+              </div>
+              <div className="md:hidden h-8 w-px bg-gradient-to-b from-primary/50 to-accent/50 relative">
+                <ArrowRight className="w-4 h-4 text-primary absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
+              </div>
+
+              <div className="flex flex-col items-center gap-2 px-6">
+                <div className="w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+                  <UserCheck className="w-8 h-8 text-emerald-400" />
+                </div>
+                <span className="text-sm font-semibold">HITL Filter</span>
+                <span className="text-[10px] text-muted-foreground">Risk Mitigation</span>
+              </div>
+
+              <div className="hidden md:block w-16 h-px bg-gradient-to-r from-accent/50 to-emerald-500/50 relative">
+                <ArrowRight className="w-4 h-4 text-emerald-400 absolute -right-2 -top-2" />
+              </div>
+              <div className="md:hidden h-8 w-px bg-gradient-to-b from-accent/50 to-emerald-500/50 relative">
+                <ArrowRight className="w-4 h-4 text-emerald-400 absolute -bottom-2 left-1/2 -translate-x-1/2 rotate-90" />
+              </div>
+
+              <div className="flex flex-col items-center gap-2 px-6">
+                <div className="w-16 h-16 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+                  <FileCheck className="w-8 h-8 text-emerald-400" />
+                </div>
+                <span className="text-sm font-semibold">Qualified UK Contract</span>
+                <span className="text-[10px] text-muted-foreground">Compliant &amp; Verified</span>
+              </div>
+            </motion.div>
+
+            <p className="text-center text-sm text-muted-foreground italic max-w-2xl mx-auto">
+              "AI finds the signal; our UK experts provide the cultural and legal verification required to close."
             </p>
-            <div className="grid sm:grid-cols-3 gap-6 pt-8">
+
+            {/* Glassmorphism Metric Cards */}
+            <div className="grid sm:grid-cols-3 gap-6 pt-4">
               {[
-                { stat: "90%", label: "Fail within 12 months" },
-                { stat: "3\u00d7", label: "Higher close rate with HITL" },
-                { stat: "< 2 min", label: "Average lead response needed" },
+                {
+                  stat: "92%",
+                  label: "Market Rejection Rate",
+                  desc: "For generic, non-compliant automated outreach in 2026."
+                },
+                {
+                  stat: "4.2\u00d7",
+                  label: "Pipeline Velocity",
+                  desc: "Achieved through HITL-verified B2B engagement."
+                },
+                {
+                  stat: "< 15 min",
+                  label: "Lead Response Time",
+                  desc: 'Industry-leading latency for "Hot-to-Human" handovers.'
+                },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -209,11 +280,12 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 * i }}
-                  className="text-center"
+                  className="glass-panel rounded p-6 text-center space-y-3"
                   data-testid={`text-stat-${i}`}
                 >
-                  <div className="text-3xl md:text-4xl font-display font-bold text-primary mb-1">{item.stat}</div>
-                  <div className="text-sm text-muted-foreground">{item.label}</div>
+                  <div className="text-4xl md:text-5xl font-display font-bold text-primary">{item.stat}</div>
+                  <div className="text-sm font-semibold text-foreground uppercase tracking-wider">{item.label}</div>
+                  <div className="text-xs text-muted-foreground leading-relaxed">{item.desc}</div>
                 </motion.div>
               ))}
             </div>
