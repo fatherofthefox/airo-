@@ -870,7 +870,7 @@ export default function Home() {
             <div className="space-y-4">
               <h4 className="font-display font-semibold text-foreground">Connect</h4>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/markreidprofile/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
